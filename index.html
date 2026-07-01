@@ -6,7 +6,7 @@
     <title>Atelier Adrielly | Croquis & Moda Parisiense</title>
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
     <style>
-        /* --- ESTILIZAÇÃO COMPLETA (EFEITO ROSA PARIS) --- */
+        /* --- ESTILIZAÇÃO E DESIGN ROSA PARIS --- */
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Poppins', sans-serif; background-color: #faf5f6; color: #4a3f41; line-height: 1.6; }
         
@@ -16,17 +16,22 @@
         nav a { text-decoration: none; color: #6b5b5e; margin-left: 20px; font-size: 14px; font-weight: 500; transition: color 0.3s; }
         nav a:hover { color: #d493a7; }
 
-        /* Banner de Entrada */
-        .hero { text-align: center; padding: 80px 20px; background: linear-gradient(135deg, #ffeef2 0%, #ffd6e0 100%); margin-bottom: 40px; }
-        .hero h1 { font-family: 'Great Vibes', cursive; font-size: 70px; color: #3a2529; margin-bottom: 10px; }
-        .hero p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 18px; color: #6b5b5e; }
+        /* Banner de Entrada com Imagem de Paris de Fundo */
+        .hero { 
+            text-align: center; 
+            padding: 100px 20px; 
+            background: linear-gradient(135deg, rgba(255, 238, 242, 0.85) 0%, rgba(255, 214, 224, 0.75) 100%), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover; 
+            margin-bottom: 40px; 
+        }
+        .hero h1 { font-family: 'Great Vibes', cursive; font-size: 75px; color: #3a2529; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(255,255,255,0.5); }
+        .hero p { font-family: 'Playfair Display', serif; font-style: italic; font-size: 20px; color: #3a2529; font-weight: bold; }
 
-        /* Contentor do Portfólio */
+        /* Container do Portfólio */
         .gallery-container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
         .gallery-title { font-family: 'Playfair Display', serif; text-align: center; font-size: 32px; margin-bottom: 40px; color: #3a2529; position: relative; }
         .gallery-title::after { content: '♥'; display: block; font-size: 16px; color: #d493a7; margin-top: 5px; }
 
-        /* Mosaico de Imagens (Estilo Pinterest/Moda Profissional) */
+        /* Mosaico de Imagens Estilo Revista de Moda */
         .grid { display: block; column-count: 3; column-gap: 25px; }
         @media (max-width: 900px) { .grid { column-count: 2; } }
         @media (max-width: 600px) { .grid { column-count: 1; } }
@@ -35,16 +40,12 @@
         .card { background: #ffffff; margin-bottom: 25px; break-inside: avoid; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(212, 147, 167, 0.12); border: 1px solid #fcedf0; transition: transform 0.3s; }
         .card:hover { transform: translateY(-5px); }
         
-        /* Imagem real ou Espaço para a foto do teu croqui */
-        .card img { width: 100%; height: auto; display: block; }
-        
-        /* Caso ainda estejas a testar sem fotos, este bloco serve de marcador visual elegante */
-        .card-placeholder { width: 100%; height: 400px; background: #fce8ec; display: flex; justify-content: center; align-items: center; color: #d493a7; font-family: 'Playfair Display', serif; font-style: italic; font-size: 16px; text-align: center; padding: 20px; border-bottom: 1px solid #fcedf0; }
-        .card-placeholder.tall { height: 520px; background: #fbe0e6; }
+        /* Imagens perfeitamente ajustadas */
+        .card img { width: 100%; height: auto; display: block; filter: sepia(10%) contrast(105%); }
         
         /* Detalhes do Croqui */
         .card-content { padding: 20px; }
-        .card-tag { font-family: 'Great Vibes', cursive; font-size: 24px; color: #d493a7; display: block; margin-bottom: 5px; }
+        .card-tag { font-family: 'Great Vibes', cursive; font-size: 26px; color: #d493a7; display: block; margin-bottom: 5px; }
         .card-title { font-family: 'Playfair Display', serif; font-size: 19px; color: #3a2529; margin-bottom: 8px; }
         .card-desc { font-size: 13px; color: #7a6b6e; }
 
@@ -71,44 +72,56 @@
 
     <section class="hero">
         <h1>Atelier Adrielly</h1>
-        <p>Alta Costura & Ilustração de Moda Inspirada no Estilo Parisiense</p>
+        <p>Alta Costura & Ilustração de Moda Inspirada na Atmosfera de Paris</p>
     </section>
 
     <div class="gallery-container" id="portfolio">
-        <h2 class="gallery-title">Os Meus Croquis de Moda</h2>
+        <h2 class="gallery-title">Os Meus Croquis & Inspirações</h2>
         
         <div class="grid">
             
             <div class="card">
-                <div class="card-placeholder tall">
-                    Marie Antoinette Modern Dress<br>[Insere aqui a foto do teu Croqui 1]
-                </div>
+                <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=500&q=80" alt="Inspiração Vestido de Gala Rosa">
                 <div class="card-content">
                     <span class="card-tag">Alta Costura</span>
                     <h3 class="card-title">Le Prisme de Rose</h3>
-                    <p class="card-desc">Vestido de gala em tule com camadas assimétricas em tons rosa quartzo.</p>
+                    <p class="card-desc">Vestido de gala em tule com camadas assimétricas em tons rosa de alta costura.</p>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-placeholder">
-                    Le Chic Parisien<br>[Insere aqui a foto do teu Croqui 2]
+                <img src="https://images.unsplash.com/photo-1537832816519-689ad163238b?auto=format&fit=crop&w=500&q=80" alt="Croqui Conceitual de Moda">
+                <div class="card-content">
+                    <span class="card-tag">Minimalismo</span>
+                    <h3 class="card-title">Linhas de Paris</h3>
+                    <p class="card-desc">Esboço conceitual focando no caimento perfeito do tecido e acessórios marcantes.</p>
                 </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&w=500&q=80" alt="Croqui Estilo Trench Coat">
                 <div class="card-content">
                     <span class="card-tag">Prêt-à-Porter</span>
                     <h3 class="card-title">O Clássico Trench Coat</h3>
-                    <p class="card-desc">Silhueta acinturada, gola oversize e botões de alfaiataria francesa.</p>
+                    <p class="card-desc">Silhueta acinturada, gola oversize e recortes estruturados de alfaiataria francesa.</p>
                 </div>
             </div>
 
             <div class="card">
-                <div class="card-placeholder tall">
-                    Street Style de Luxo<br>[Insere aqui a foto do teu Croqui 3]
-                </div>
+                <img src="https://images.unsplash.com/photo-1558769132-cb1aea458c5e?auto=format&fit=crop&w=500&q=80" alt="Conceito Rosa de Moda">
                 <div class="card-content">
-                    <span class="card-tag">Coleção de Outono</span>
+                    <span class="card-tag">Paleta de Cores</span>
+                    <h3 class="card-title">Nuances de Quartz</h3>
+                    <p class="card-desc">Uma coleção pensada no equilíbrio entre tons nudes e variações românticas de rosa.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=500&q=80" alt="Estilo Street Chic">
+                <div class="card-content">
+                    <span class="card-tag">Street Style Paris</span>
                     <h3 class="card-title">Tailleur Moderne</h3>
-                    <p class="card-desc">Blazer rosa queimado estruturado, combinado com lenço de seda clássico.</p>
+                    <p class="card-desc">Blazer rosa estruturado combinado com texturas fluidas para as ruas de Paris.</p>
                 </div>
             </div>
 
@@ -121,12 +134,12 @@
             
             <div class="tip-box">
                 <h3>1. A Estética do "Je Ne Sais Quoi"</h3>
-                <p>O visual parisiense perfeito nunca parece super planeado. Se usares uma peça de alta costura muito marcante, combina-a com um cabelo mais natural ou um acessório minimalista.</p>
+                <p>O visual parisiense perfeito nunca parece super planejado. Se usar uma peça de alta costura muito marcante ou estruturada, combine-a com um penteado mais despojado ou acessórios casuais.</p>
             </div>
 
             <div class="tip-box">
-                <h3>2. A Força da Alfaiataria Rosa</h3>
-                <p>O rosa não precisa de ser apenas "romântico". Um blazer bem cortado ou calças de alfaiataria em rosa queimado transmitem poder, elegância e muita presença nas ruas de Paris.</p>
+                <h3>2. O Rosa como Novo Neutro</h3>
+                <p>O rosa não precisa ser exclusivamente infantil. Um bom casaco ou terninho em rosa queimado transmite elegância madura e combina perfeitamente com paletas pretas, cinzas ou marrons de inverno.</p>
             </div>
         </div>
     </section>
